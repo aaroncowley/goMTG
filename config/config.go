@@ -12,9 +12,8 @@ type Config struct {
 }
 
 func (c *Config) Read() {
-    _, err := toml.DecodeFile("config.toml" &c)
+    _, err := toml.DecodeFile("config.toml", &c)
     if err != nil {
         log.Fatal(err)
     }
-
 }
