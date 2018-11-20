@@ -57,10 +57,6 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	w.Write(response)
 }
 
-func respondWithString(w http.ResponseWriter, code int, payload []string) {
-	w.Write([]byte(strings.Join(payload, "\n")))
-}
-
 func init() {
 	config.Read()
 
